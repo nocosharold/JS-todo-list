@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+$outfit: 'Outfit', sans-serif;
+$black: #111111;
+$orange: #ED8B37;
+$light_orange: #ed8c3780;
+$shadow_orange: 0 0 0 0.2rem #ed8c3780;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Outfit', sans-serif;
+    color: $black;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#landingPage{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 160px;
+    .landing_image{
+        width: 580px;
+        border-radius: 10px;
+    }
+    .headline_group{
+        min-width: 538px;
+        h1{
+            font: 700 24px/30px $outfit;
+            margin-bottom: 4px;
+        }
+        h2{
+            font: 400 16px/20px $outfit;
+        }
+        .form-control{
+            &:focus{
+                border-color: $light_orange;
+                box-shadow: $shadow_orange;
+            }
+        }
+        .btn-primary{
+            width: 100%;
+            background-color: $orange;
+            color: $black;
+            border-color: $orange;
+            transition: all 0.21s ease-in-out;
+            &:hover{
+                opacity: 0.9;
+            }
+            &:focus{
+                box-shadow: $shadow_orange;
+            }
+        }
+    }
+    @media (max-width: 1024px) {
+        column-gap: 40px;
+        .landing_image{
+            width: 400px;
+        }
+        .headline_group{
+            min-width: 400px;
+        }
+    }
+    @media (max-width: 768px) {
+        text-align: center;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+    @media (max-width: 425px) {
+        .landing_image,
+        .headline_group{
+            width: calc(100%);
+            padding: 16px;
+        }
+    }
+}
+
+#mainPage {
+    display: none;
+}
+
+.form-check-input {
+    display: none;
+}
+
+
+.list-group-item {
+    user-select: none;
+}
+
+
+.d-flex {
+    column-gap: 24px;
+}
+
+
+#itemList {
+    li {
+        display: flex;
+        justify-content: space-between;
+    } 
+}
+
+
+#itemList {
+    .list-group-item-success {
+        label {
+            text-decoration: line-through;
+        }
+    }
+}

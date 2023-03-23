@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: 'Outfit', sans-serif;
+  color: #111111;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#landingPage {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 160px;
+}
+
+#landingPage .landing_image {
+  width: 580px;
+  border-radius: 10px;
+}
+
+#landingPage .headline_group {
+  min-width: 538px;
+}
+
+#landingPage .headline_group h1 {
+  font: 700 24px/30px "Outfit", sans-serif;
+  margin-bottom: 4px;
+}
+
+#landingPage .headline_group h2 {
+  font: 400 16px/20px "Outfit", sans-serif;
+}
+
+#landingPage .headline_group .form-control:focus {
+  border-color: #ed8c3780;
+  box-shadow: 0 0 0 0.2rem #ed8c3780;
+}
+
+#landingPage .headline_group .btn-primary {
+  width: 100%;
+  background-color: #ED8B37;
+  color: #111111;
+  border-color: #ED8B37;
+  transition: all 0.21s ease-in-out;
+}
+
+#landingPage .headline_group .btn-primary:hover {
+  opacity: 0.9;
+}
+
+#landingPage .headline_group .btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem #ed8c3780;
+}
+
+@media (max-width: 1024px) {
+  #landingPage {
+    column-gap: 40px;
+  }
+  #landingPage .landing_image {
+    width: 400px;
+  }
+  #landingPage .headline_group {
+    min-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  #landingPage {
+    text-align: center;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+}
+
+@media (max-width: 425px) {
+  #landingPage .landing_image,
+  #landingPage .headline_group {
+    width: calc(100%);
+    padding: 16px;
+  }
+}
+
+#mainPage {
+  display: none;
+}
+
+.form-check-input {
+  display: none;
+}
+
+.list-group-item {
+  user-select: none;
+}
+
+.d-flex {
+  column-gap: 24px;
+}
+
+#itemList li {
+  display: flex;
+  justify-content: space-between;
+}
+
+#itemList .list-group-item-success label {
+  text-decoration: line-through;
+}
