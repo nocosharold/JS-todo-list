@@ -45,6 +45,16 @@
   box-shadow: 0 0 0 0.2rem #ed8c3780;
 }
 
+#landingPage .headline_group .form-control.empty {
+  border-color: #F2645D;
+  box-shadow: 0 0 0 0.2rem #F2645D80;
+}
+
+#landingPage .headline_group .form-control.empty:not(:placeholder-shown) {
+  border-color: #ed8c3780;
+  box-shadow: 0 0 0 0.2rem #ed8c3780;
+}
+
 #landingPage .headline_group .btn-primary {
   width: 100%;
   background-color: #ED8B37;

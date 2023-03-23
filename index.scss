@@ -4,6 +4,8 @@ $outfit: 'Outfit', sans-serif;
 $black: #111111;
 $orange: #ED8B37;
 $light_orange: #ed8c3780;
+$error: #F2645D;
+$shadow_error: 0 0 0 0.2rem #F2645D80;
 $shadow_orange: 0 0 0 0.2rem #ed8c3780;
 
 *{
@@ -44,6 +46,15 @@ $shadow_orange: 0 0 0 0.2rem #ed8c3780;
             &:focus{
                 border-color: $light_orange;
                 box-shadow: $shadow_orange;
+            }
+            &.empty{
+                border-color: $error;
+                box-shadow: $shadow_error;
+                &:not(:placeholder-shown){
+                    border-color: $light_orange;
+                    box-shadow: $shadow_orange;
+                }
+               
             }
         }
         .btn-primary{
