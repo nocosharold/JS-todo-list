@@ -21,16 +21,16 @@
         <div class="form-group">
             <input type="text" class="form-control mb-4" id="nameInput" placeholder="Enter your name" autofocus>
         </div>
-        <button type="button" class="btn btn-primary" onclick="proceedToMain()">Continue</button>
+        <button id="btnContinue" type="button" class="btn btn-primary">Continue</button>
         </div>
     </div>
     <div id="mainPage">
-      <button type="button" class="btn btn-secondary" onclick="exitToLanding()">Exit</button>
-      <div class="todoContainer">
+      <button type="button" id="btnExit" class="btn btn-secondary">Exit</button>
+      <div class="todo_container">
         <h1>Hi, <span id="username"></span>! <span class="message">Here's your To-Do List.</span></h1>
         <div class="form-group d-flex">
-            <input type="text" class="form-control" id="itemInput" placeholder="Enter an item">
-            <button type="button" class="btn btn-primary" onclick="addItem()">Add</button>
+            <input type="text" class="form-control" id="itemInput" placeholder="Enter your task">
+            <button id="btnAdd" type="button" class="btn btn-primary">Add</button>
         </div>
         <ul class="list-group" id="itemList"></ul>
       </div>

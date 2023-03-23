@@ -1,3 +1,11 @@
+const btnContinue = document.querySelector("#btnContinue");
+const btnExit = document.querySelector("#btnExit");
+const btnAdd = document.querySelector("#btnAdd");
+
+btnContinue.addEventListener("click", proceedToMain)
+btnExit.addEventListener("click", exitToLanding)
+btnAdd.addEventListener("click", addItem)
+
 function proceedToMain() {
 	const nameInput = document.getElementById('nameInput');
 	const username = nameInput.value.trim();
@@ -20,7 +28,8 @@ function addItem() {
 	
 	// Check if item input is empty
 	if (!itemInput.value.trim()) {
-		alert('Please enter a task.');
+		alert('Please enter your task.');
+		itemInput.focus();
 		return;
 	}
 

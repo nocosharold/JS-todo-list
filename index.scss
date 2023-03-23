@@ -3,10 +3,16 @@
 $outfit: 'Outfit', sans-serif;
 $black: #111111;
 $orange: #ED8B37;
-$light_orange: #ed8c3780;
+$light_orange: rgba(237, 140, 55, 0.502);
 $error: #F2645D;
 $shadow_error: 0 0 0 0.2rem #F2645D80;
 $shadow_orange: 0 0 0 0.2rem #ed8c3780;
+$shadow_green: 0 0 0 0.2rem #dde4ce80;
+$green: #DDE4CE;
+$light_green: rgba(221, 228, 206, 0.502);
+$dark_green: #B8C799;
+$gray: #CED4DA;
+$dark_gray: #6C757D;
 
 *{
     margin: 0;
@@ -41,21 +47,6 @@ $shadow_orange: 0 0 0 0.2rem #ed8c3780;
         h2{
             font: 400 16px/20px $outfit;
         }
-        .form-control{
-            &:focus{
-                border-color: $light_orange;
-                box-shadow: $shadow_orange;
-            }
-            &.empty{
-                border-color: $error;
-                box-shadow: $shadow_error;
-                &:not(:placeholder-shown){
-                    border-color: $light_orange;
-                    box-shadow: $shadow_orange;
-                }
-               
-            }
-        }
         .btn-primary{
             width: 100%;
             background-color: $orange;
@@ -87,20 +78,37 @@ $shadow_orange: 0 0 0 0.2rem #ed8c3780;
     @media (max-width: 425px) {
         .landing_image,
         .headline_group{
-            width: calc(100%);
-            padding: 16px;
+            min-width: calc(100%);
+            // padding: 16px;
         }
+    }
+}
+
+.form-control{
+    &:focus{
+        border-color: $light_orange;
+        box-shadow: $shadow_orange;
+    }
+    &.empty{
+        border-color: $error;
+        box-shadow: $shadow_error;
+        &:not(:placeholder-shown){
+            border-color: $light_orange;
+            box-shadow: $shadow_orange;
+        }
+       
     }
 }
 
 #mainPage {
     display: none;
     .btn-secondary{
-        background-color: #CED4DA;
-        border-color: #CED4DA;
-        color: #6C757D;
+        padding: 9px 11.52px;
+        background-color: $gray;
+        border-color: $gray;
+        color: $dark_gray;
         display: block;
-        margin: 80px 0 0 auto;
+        margin: 80px 40px 40px auto;
         transition: all 0.21s ease-in-out;
         &::before{
             margin-right: 8px;
@@ -115,44 +123,69 @@ $shadow_orange: 0 0 0 0.2rem #ed8c3780;
             filter: brightness(0.9);
         }
     }
-    h1{
-        font: 700 24px/30px $outfit;
-        #username{
-            text-transform: uppercase;
+    .todo_container {
+        padding: 40px;
+        border-radius: 10px;
+        background-color: $green;
+        .d-flex {
+            column-gap: 16px;
         }
-        .message{
-            display: block;
+        h1{
+            font: 700 24px/30px $outfit;
+            margin-bottom: 26px;
+            #username{
+                text-transform: uppercase;
+            }
+            .message{
+                display: block;
+            }
         }
-    }
-}
-
-.form-check-input {
-    display: none;
-}
-
-
-.list-group-item {
-    user-select: none;
-}
-
-
-.d-flex {
-    column-gap: 24px;
-}
-
-
-#itemList {
-    li {
-        display: flex;
-        justify-content: space-between;
-    } 
-}
-
-
-#itemList {
-    .list-group-item-success {
-        label {
-            text-decoration: line-through;
+        .form-group{
+            .form-control{
+                background-color: $green;
+            }
+            .btn-primary{
+                padding: 9px 10.36px;
+                background-color: $orange;
+                border-color: $orange;
+                color: $black;
+                display: block;
+                transition: all 0.21s ease-in-out;
+                &::before{
+                    margin-right: 8px;
+                    content: '';
+                    display: inline-block;
+                    width: 20px;
+                    background: url('./assets/img/add_icon.svg');
+                    height: 20px;
+                    vertical-align: sub;
+                }
+                &:hover{
+                    opacity: 0.9;
+                }
+                &:focus{
+                    box-shadow: $shadow_orange;
+                }
+            }
+        }
+        #itemList {
+            .form-check-input {
+                display: none;
+            }
+            .list-group-item {
+                user-select: none;
+                display: flex;
+                justify-content: space-between;
+                background-color: transparent;
+                cursor: pointer;
+                &.list-group-item-success {
+                    background-color: $dark_green;
+                    label {
+                        text-decoration: line-through;
+                    }
+                }
+            } 
+            
         }
     }
 }
