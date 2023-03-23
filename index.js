@@ -4,7 +4,6 @@ function proceedToMain() {
 
 	// Check if username is empty
 	if (!username) {
-		// alert('Please Enter your name.');
 		nameInput.classList.add("empty");
 		nameInput.focus();
 		return;

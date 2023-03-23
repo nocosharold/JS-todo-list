@@ -18,7 +18,6 @@ $shadow_orange: 0 0 0 0.2rem #ed8c3780;
 
 .container {
     height: 100vh;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -96,6 +95,35 @@ $shadow_orange: 0 0 0 0.2rem #ed8c3780;
 
 #mainPage {
     display: none;
+    .btn-secondary{
+        background-color: #CED4DA;
+        border-color: #CED4DA;
+        color: #6C757D;
+        display: block;
+        margin: 80px 0 0 auto;
+        transition: all 0.21s ease-in-out;
+        &::before{
+            margin-right: 8px;
+            content: '';
+            display: inline-block;
+            width: 20px;
+            background: url('./assets/img/exit_icon.svg');
+            height: 20px;
+            vertical-align: sub;
+        }
+        &:hover{
+            filter: brightness(0.9);
+        }
+    }
+    h1{
+        font: 700 24px/30px $outfit;
+        #username{
+            text-transform: uppercase;
+        }
+        .message{
+            display: block;
+        }
+    }
 }
 
 .form-check-input {

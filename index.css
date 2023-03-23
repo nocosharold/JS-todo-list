@@ -9,7 +9,6 @@
 
 .container {
   height: 100vh;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -101,6 +100,41 @@
 
 #mainPage {
   display: none;
+}
+
+#mainPage .btn-secondary {
+  background-color: #CED4DA;
+  border-color: #CED4DA;
+  color: #6C757D;
+  display: block;
+  margin: 80px 0 0 auto;
+  transition: all 0.21s ease-in-out;
+}
+
+#mainPage .btn-secondary::before {
+  margin-right: 8px;
+  content: '';
+  display: inline-block;
+  width: 20px;
+  background: url("./assets/img/exit_icon.svg");
+  height: 20px;
+  vertical-align: sub;
+}
+
+#mainPage .btn-secondary:hover {
+  filter: brightness(0.9);
+}
+
+#mainPage h1 {
+  font: 700 24px/30px "Outfit", sans-serif;
+}
+
+#mainPage h1 #username {
+  text-transform: uppercase;
+}
+
+#mainPage h1 .message {
+  display: block;
 }
 
 .form-check-input {
