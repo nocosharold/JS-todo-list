@@ -1,29 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
 * {
+  box-sizing: 0;
+  color: #111111;
+  font-family: 'Outfit', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: 0;
-  font-family: 'Outfit', sans-serif;
-  color: #111111;
 }
 
 .container {
+  align-items: center;
   height: 100vh;
   justify-content: center;
-  align-items: center;
 }
 
 #landingPage {
-  height: 100%;
-  display: flex;
-  justify-content: center;
   align-items: center;
   column-gap: 160px;
+  display: flex;
+  height: 100%;
+  justify-content: center;
 }
 
 #landingPage .landing_image {
-  width: 580px;
   border-radius: 10px;
+  width: 580px;
 }
 
 #landingPage .headline_group {
@@ -40,11 +40,11 @@
 }
 
 #landingPage .headline_group .btn-primary {
-  width: 100%;
   background-color: #ED8B37;
-  color: #111111;
   border-color: #ED8B37;
+  color: #111111;
   transition: all 0.21s ease-in-out;
+  width: 100%;
 }
 
 #landingPage .headline_group .btn-primary:hover {
@@ -69,9 +69,9 @@
 
 @media (max-width: 768px) {
   #landingPage {
-    text-align: center;
     flex-direction: column;
     row-gap: 40px;
+    text-align: center;
   }
 }
 
@@ -102,23 +102,23 @@
 }
 
 #mainPage .btn-secondary {
-  padding: 9px 11.52px;
   background-color: #CED4DA;
   border-color: #CED4DA;
   color: #6C757D;
   display: block;
   margin: 80px 40px 40px auto;
+  padding: 9px 11.52px;
   transition: all 0.21s ease-in-out;
 }
 
 #mainPage .btn-secondary::before {
-  margin-right: 8px;
+  background: url("./assets/img/exit_icon.svg");
   content: '';
   display: inline-block;
-  width: 20px;
-  background: url("./assets/img/exit_icon.svg");
   height: 20px;
+  margin-right: 8px;
   vertical-align: sub;
+  width: 20px;
 }
 
 #mainPage .btn-secondary:hover {
@@ -126,13 +126,26 @@
 }
 
 #mainPage .todo_container {
-  padding: 40px;
-  border-radius: 10px;
   background-color: #DDE4CE;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  padding: 40px;
 }
 
 #mainPage .todo_container .d-flex {
   column-gap: 16px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 425px) {
+  #mainPage .todo_container {
+    min-width: 290px;
+  }
+  #mainPage .todo_container .d-flex {
+    flex-direction: column;
+    row-gap: 16px;
+    text-align: center;
+  }
 }
 
 #mainPage .todo_container h1 {
@@ -153,22 +166,22 @@
 }
 
 #mainPage .todo_container .form-group .btn-primary {
-  padding: 9px 10.36px;
   background-color: #ED8B37;
   border-color: #ED8B37;
   color: #111111;
   display: block;
+  padding: 9px 10.36px;
   transition: all 0.21s ease-in-out;
 }
 
 #mainPage .todo_container .form-group .btn-primary::before {
-  margin-right: 8px;
+  background: url("./assets/img/add_icon.svg");
   content: '';
   display: inline-block;
-  width: 20px;
-  background: url("./assets/img/add_icon.svg");
   height: 20px;
+  margin-right: 8px;
   vertical-align: sub;
+  width: 20px;
 }
 
 #mainPage .todo_container .form-group .btn-primary:hover {
@@ -184,11 +197,50 @@
 }
 
 #mainPage .todo_container #itemList .list-group-item {
-  user-select: none;
-  display: flex;
-  justify-content: space-between;
   background-color: transparent;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  user-select: none;
+}
+
+#mainPage .todo_container #itemList .list-group-item:hover .btn-danger {
+  pointer-events: auto;
+}
+
+#mainPage .todo_container #itemList .list-group-item:hover .btn-danger::before {
+  animation: fade-in 0.21s ease-in-out;
+  opacity: 1;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#mainPage .todo_container #itemList .list-group-item .btn-danger {
+  background-color: transparent;
+  border: none;
+  transition: all 0.21s ease-in-out;
+  pointer-events: none;
+}
+
+#mainPage .todo_container #itemList .list-group-item .btn-danger::before {
+  background: url("./assets/img/delete_icon.svg");
+  content: '';
+  display: inline-block;
+  height: 21px;
+  opacity: 0;
+  vertical-align: sub;
+  width: 16px;
+}
+
+#mainPage .todo_container #itemList .list-group-item .btn-danger:focus {
+  box-shadow: none;
 }
 
 #mainPage .todo_container #itemList .list-group-item.list-group-item-success {

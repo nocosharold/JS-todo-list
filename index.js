@@ -1,14 +1,25 @@
 const btnContinue = document.querySelector("#btnContinue");
 const btnExit = document.querySelector("#btnExit");
 const btnAdd = document.querySelector("#btnAdd");
+const itemInput = document.getElementById("itemInput");
+const nameInput = document.getElementById('nameInput');
 
-btnContinue.addEventListener("click", proceedToMain)
-btnExit.addEventListener("click", exitToLanding)
-btnAdd.addEventListener("click", addItem)
+btnContinue.addEventListener("click", proceedToMain);
+btnExit.addEventListener("click", exitToLanding);
+btnAdd.addEventListener("click", addItem);
+
+itemInput.addEventListener("keyup", function(event){
+	event.key === "Enter" && addItem();
+});
+
+nameInput.addEventListener("keyup", function(event){
+	event.key === "Enter" && proceedToMain();
+});
+
 
 function proceedToMain() {
-	const nameInput = document.getElementById('nameInput');
 	const username = nameInput.value.trim();
+
 
 	// Check if username is empty
 	if (!username) {
@@ -23,7 +34,6 @@ function proceedToMain() {
 }
 
 function addItem() {
-	const itemInput = document.getElementById('itemInput');
 	const itemList = document.getElementById('itemList');
 	
 	// Check if item input is empty
@@ -55,7 +65,7 @@ function addItem() {
 	
 	const newRemoveButton = document.createElement('button');
 	newRemoveButton.classList.add('btn', 'btn-danger', 'btn-sm', 'ms-2');
-	newRemoveButton.appendChild(document.createTextNode('Remove'));
+	newRemoveButton.appendChild(document.createTextNode(''));
 	newRemoveButton.onclick = function() {
 		removeItem(newItem);
 	};
