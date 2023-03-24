@@ -128,13 +128,15 @@
 #mainPage .todo_container {
   background-color: #DDE4CE;
   border-radius: 10px;
-  margin-bottom: 40px;
   padding: 40px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
 }
 
 #mainPage .todo_container .d-flex {
   column-gap: 16px;
-  margin-bottom: 32px;
+  margin-bottom: 0;
 }
 
 @media (max-width: 425px) {
@@ -150,7 +152,7 @@
 
 #mainPage .todo_container h1 {
   font: 700 24px/30px "Outfit", sans-serif;
-  margin-bottom: 26px;
+  margin-bottom: 0;
 }
 
 #mainPage .todo_container h1 #username {
@@ -202,6 +204,11 @@
   display: flex;
   justify-content: space-between;
   user-select: none;
+}
+
+#mainPage .todo_container #itemList .list-group-item label {
+  color: #6C757D;
+  font: 16px/30px "Outfit", sans-serif;
 }
 
 #mainPage .todo_container #itemList .list-group-item:hover .btn-danger {

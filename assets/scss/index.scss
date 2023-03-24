@@ -125,12 +125,13 @@ $shadow_orange: 0 0 0 0.2rem #ed8c3780;
     .todo_container {
         background-color: $green;
         border-radius: 10px;
-        margin-bottom: 40px;
         padding: 40px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
         .d-flex {
             column-gap: 16px;
-            margin-bottom: 32px;
-            
+            margin-bottom: 0;
         }
         @media (max-width: 425px) {
             min-width: 290px;
@@ -142,7 +143,7 @@ $shadow_orange: 0 0 0 0.2rem #ed8c3780;
         }
         h1{
             font: 700 24px/30px $outfit;
-            margin-bottom: 26px;
+            margin-bottom: 0;
             #username{
                 text-transform: uppercase;
             }
@@ -188,6 +189,10 @@ $shadow_orange: 0 0 0 0.2rem #ed8c3780;
                 display: flex;
                 justify-content: space-between;
                 user-select: none;
+                label{
+                    color: $dark_gray;
+                    font: 16px/30px $outfit;
+                }
                 &:hover{
                     .btn-danger{
                         pointer-events: auto;
