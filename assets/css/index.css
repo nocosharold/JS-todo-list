@@ -112,7 +112,7 @@
 }
 
 #mainPage .btn-secondary::before {
-  background: url("./assets/img/exit_icon.svg");
+  background: url("../img/exit_icon.svg");
   content: '';
   display: inline-block;
   height: 20px;
@@ -175,7 +175,7 @@
 }
 
 #mainPage .todo_container .form-group .btn-primary::before {
-  background: url("./assets/img/add_icon.svg");
+  background: url("../img/add_icon.svg");
   content: '';
   display: inline-block;
   height: 20px;
@@ -230,7 +230,7 @@
 }
 
 #mainPage .todo_container #itemList .list-group-item .btn-danger::before {
-  background: url("./assets/img/delete_icon.svg");
+  background: url("../img/delete_icon.svg");
   content: '';
   display: inline-block;
   height: 21px;

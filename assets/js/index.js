@@ -20,7 +20,6 @@ nameInput.addEventListener("keyup", function(event){
 function proceedToMain() {
 	const username = nameInput.value.trim();
 
-
 	// Check if username is empty
 	if (!username) {
 		nameInput.classList.add("empty");
@@ -31,6 +30,7 @@ function proceedToMain() {
 	document.getElementById('username').textContent = username;
 	document.getElementById('landingPage').style.display = 'none';
 	document.getElementById('mainPage').style.display = 'block';
+	itemInput.focus();
 }
 
 function addItem() {
